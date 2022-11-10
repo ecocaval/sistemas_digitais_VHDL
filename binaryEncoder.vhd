@@ -24,7 +24,7 @@ begin
     begin
         one_index := 0;
         if (priorityMSB) then
-            for i in 0 downto input'length loop
+            for i in 0 to input'length loop
                 if(input(i) = '1') then
                     one_index := i;
                 else
