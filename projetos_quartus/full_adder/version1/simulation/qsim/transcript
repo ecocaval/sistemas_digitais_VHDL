@@ -1,0 +1,14 @@
+# do full_adder.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:58:07 on Nov 08,2022
+# vcom -work work full_adder.vho 
+# -- Loading package STANDARD
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/ecoca/OneDrive/Área de Trabalho/VHDL/full_adder/simulation/qsim/work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vcom-9) Problem while writing token file "C:/Users/ecoca/OneDrive/Área de Trabalho/VHDL/full_adder/simulation/qsim/work/_temp/vcomcvg921".
+# O sistema não pode encontrar o caminho especificado. (GetLastError() = 3)
+# ** Error: full_adder.vho(30): VHDL Compiler exiting
+# End time: 18:58:07 on Nov 08,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: D:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vcom failed.
+# Executing ONERROR command at macro ./full_adder.do line 3

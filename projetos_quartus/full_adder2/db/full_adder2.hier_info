@@ -1,0 +1,145 @@
+|adder
+a[0] => full_adder2:generate_full_adder:0:full_adder.a
+a[1] => full_adder2:generate_full_adder:1:full_adder.a
+a[2] => full_adder2:generate_full_adder:2:full_adder.a
+a[3] => full_adder2:generate_full_adder:3:full_adder.a
+a[4] => full_adder2:generate_full_adder:4:full_adder.a
+a[5] => full_adder2:generate_full_adder:5:full_adder.a
+a[6] => full_adder2:generate_full_adder:6:full_adder.a
+a[7] => full_adder2:generate_full_adder:7:full_adder.a
+a[8] => full_adder2:generate_full_adder:8:full_adder.a
+a[9] => full_adder2:generate_full_adder:9:full_adder.a
+b[0] => full_adder2:generate_full_adder:0:full_adder.b
+b[1] => full_adder2:generate_full_adder:1:full_adder.b
+b[2] => full_adder2:generate_full_adder:2:full_adder.b
+b[3] => full_adder2:generate_full_adder:3:full_adder.b
+b[4] => full_adder2:generate_full_adder:4:full_adder.b
+b[5] => full_adder2:generate_full_adder:5:full_adder.b
+b[6] => full_adder2:generate_full_adder:6:full_adder.b
+b[7] => full_adder2:generate_full_adder:7:full_adder.b
+b[8] => full_adder2:generate_full_adder:8:full_adder.b
+b[9] => full_adder2:generate_full_adder:9:full_adder.b
+result[0] << full_adder2:generate_full_adder:0:full_adder.sum
+result[1] << full_adder2:generate_full_adder:1:full_adder.sum
+result[2] << full_adder2:generate_full_adder:2:full_adder.sum
+result[3] << full_adder2:generate_full_adder:3:full_adder.sum
+result[4] << full_adder2:generate_full_adder:4:full_adder.sum
+result[5] << full_adder2:generate_full_adder:5:full_adder.sum
+result[6] << full_adder2:generate_full_adder:6:full_adder.sum
+result[7] << full_adder2:generate_full_adder:7:full_adder.sum
+result[8] << full_adder2:generate_full_adder:8:full_adder.sum
+result[9] << full_adder2:generate_full_adder:9:full_adder.sum
+carry_out << full_adder2:generate_full_adder:9:full_adder.cout
+overflow << overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:9:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:8:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:7:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:6:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:5:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:4:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:3:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:2:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:1:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder|full_adder2:\generate_full_adder:0:full_adder
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
