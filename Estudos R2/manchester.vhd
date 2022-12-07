@@ -15,7 +15,7 @@ entity ManchesterEncoder is
 end entity;
 
 architecture studenttry of ManchesterEncoder is
-	type State is (IDLE, SOA, S0B, S1A, S1B);
+	type State is (IDLE, S0A, S0B, S1A, S1B);
 	signal currentState, nextState: State;
 begin
 	-- next-state logic (DO NOT CHANGE OR REMOVE THIS LINE)
@@ -23,11 +23,11 @@ begin
     begin
         case currentState is
             when IDLE => 
-                if(not v) then
+                if(v='0') then
                     nextState <= IDLE;
-                elsif(v and d) then
+                elsif(v='1' and d='1') then
                     nextState <= S1A;
-                elsif(v and not d) then
+                elsif(v='1' and d='0') then
                     nextState <= S0A;
                 end if;
 
@@ -35,11 +35,11 @@ begin
                 nextState <= S0B;
 
             when S0B =>
-                if(not v) then
+                if(v='0') then
                     nextState <= IDLE;  
-                elsif(v and d) then
+                elsif(v='1' and d='1') then
                     nextState <= S1A;
-                elsif(v and not d) then
+                elsif(v='1' and d='0') then
                     nextState <= S0A;
                 end if;
             
@@ -47,25 +47,27 @@ begin
                 nextState <= S1B;
         
             when S1B =>
-                if(not v) then
+                if(v='0') then
                     nextState <= IDLE;  
-                elsif(v and d) then
+                elsif(v='1' and d='1') then
                     nextState <= S1A;
-                elsif(v and not d) then
+                elsif(v='1' and d='0') then
                     nextState <= S0A;
                 end if;
+        end case;
     end process;
 	-- end-next-state logic (DO NOT CHANGE OR REMOVE THIS LINE)
 	
 	
 	-- memory register (DO NOT CHANGE OR REMOVE THIS LINE)
 	process(clock, reset) is
-        if(reset) then
+	begin
+        if(reset = '1') then
             currentState <= IDLE;
         elsif(rising_edge(clock)) then
             currentState <= nextState;
         end if;            
-    end processs;
+    end process;
 	-- memory register (DO NOT CHANGE OR REMOVE THIS LINE)
 	
 	
